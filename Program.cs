@@ -12,6 +12,9 @@ namespace Quest
         { Console.WriteLine("Enter your name");
             string playerName = Console.ReadLine();
             
+
+
+
              Adventurer theAdventurer = new Adventurer(playerName);
             // Create a few challenges for our Adventurer's quest
             // The "Challenge" Constructor takes three arguments
@@ -80,6 +83,17 @@ namespace Quest
             {
                 Console.WriteLine("I guess you did...ok? ...sorta. Still, you should get out of my sight.");
             }
+            Console.WriteLine("Would you like to play again? (Y/N)");
+            string playAgain = Console.ReadLine().ToLower();
+
+            if (playAgain == "y"){
+                Main(args);
+            }
+            else{
+                Console.WriteLine("Game Over");
+            }
+            
+            }
         }
     }
-}
+
